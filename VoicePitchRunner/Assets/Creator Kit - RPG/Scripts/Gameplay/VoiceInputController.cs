@@ -13,11 +13,16 @@ namespace RPGM.UI
     public class VoiceInputController : MonoBehaviour
     {
         public float stepSize = 0.1f;
+        public GameManager manager;
         GameModel model = Schedule.GetModel<GameModel>();
-        PitchController pitchController;
-        
+        public PitchController pitchController;
 
-        
+
+        private void Awake()
+        {
+            manager = FindObjectOfType<GameManager>();
+        }
+
         public enum State
         {
             CharacterControl,
@@ -46,7 +51,7 @@ namespace RPGM.UI
             if(pitchValue > 500)
             {
                 model.player.nextMoveCommand = Vector3.left * stepSize;
-            } else if (pitchValue < 100)
+            } else if (pitchValue < manager.IdleThreshold)
             {
                 model.player.nextMoveCommand = Vector3.zero;
             } else

@@ -24,6 +24,6 @@ public class SettingsManager : MonoBehaviour
             count++;
             pitchValue.text = Mathf.Round(idlePitchValue / count).ToString();
         }
-        manager.IdleThreshold = Mathf.Round(idlePitchValue /count);
+        manager.IdleThreshold = Mathf.Round(idlePitchValue /count) * 1.5;
     }
 }
