@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1645379638834251467}
   - component: {fileID: 1645379638834251466}
   - component: {fileID: 1645379638834251465}
+  - component: {fileID: 3468754693189890545}
+  - component: {fileID: -804368464423495340}
   m_Layer: 0
   m_Name: blockPrefab
   m_TagString: Untagged
@@ -130,3 +132,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.26, y: 6.26}
   m_EdgeRadius: 0
+--- !u!114 &3468754693189890545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645379638834251464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb045083f10d3b84787932c2b5ef0cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-804368464423495340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645379638834251464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa3c260db47248a18ecb8112019040d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyWhenActivated: 0
+  healthChange: -1

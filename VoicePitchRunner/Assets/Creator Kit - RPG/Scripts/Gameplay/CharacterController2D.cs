@@ -93,9 +93,5 @@ namespace RPGM.Gameplay
             pixelPerfectCamera = GameObject.FindObjectOfType<PixelPerfectCamera>();
         }
 
-        void OnCollisionEnter2D()
-        {
-            Debug.Log("we got hit");
-        }
     }
 }
