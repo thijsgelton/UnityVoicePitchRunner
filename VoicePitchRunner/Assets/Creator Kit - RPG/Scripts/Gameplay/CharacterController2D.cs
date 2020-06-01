@@ -92,5 +92,10 @@ namespace RPGM.Gameplay
             spriteRenderer = GetComponent<SpriteRenderer>();
             pixelPerfectCamera = GameObject.FindObjectOfType<PixelPerfectCamera>();
         }
+
+        void OnCollisionEnter2D()
+        {
+            Debug.Log("we got hit");
+        }
     }
 }
