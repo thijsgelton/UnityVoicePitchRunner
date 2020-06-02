@@ -10,4 +10,9 @@ public class TransferListenerToCameraOnDestroy : MonoBehaviour
             }
         }
     }
+
+    private void OnCollisionEnter2D()
+    {
+        Debug.Log("We got hit");
+    }
 }
