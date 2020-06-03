@@ -1,15 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class block : MonoBehaviour
+public class Block : MonoBehaviour
 {
-    // Start is called before the first frame update
-   
-    // Update is called once per frame
+    private Rigidbody2D rb;
+
+    public float DownwardVelocity;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(0, -DownwardVelocity);
+    }
+
     void Update()
     {
-        if(transform.position.y< -10f)
+        if(transform.position.y < -7f)
         {
             Destroy(gameObject);
         }

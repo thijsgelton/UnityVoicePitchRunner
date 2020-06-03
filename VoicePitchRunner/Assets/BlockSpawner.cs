@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BlockSpawner : MonoBehaviour
@@ -12,28 +13,25 @@ public class BlockSpawner : MonoBehaviour
     
     public float timeBetweenWaves = 1f;
 
+    public int maxAmountToSpawn = 2;
+
     public float timeToSpawn = 2f;
-    
+
     void Update(){
-            if(Time.time >= timeToSpawn){
-                SpawnBlocks();
-                timeToSpawn = Time.time + timeBetweenWaves;
-            }
-            
-          }
-        
-
-        void SpawnBlocks (){
-        
-            int randomIndex = Random.Range(0,spawnPoints.Length);
-
-            for(int i = 0;i<spawnPoints.Length;i++)
-            {
-                if(randomIndex != i){
-                    Instantiate(blockPrefab,spawnPoints[i].position, Quaternion.identity);  
-			    }  
-		    }
-            
-        
+        if(Time.time >= timeToSpawn){
+            SpawnBlocks();
+            timeToSpawn = Time.time + timeBetweenWaves;
         }
+    }
+        
+
+    void SpawnBlocks (){
+        var freeSpawns = spawnPoints.ToList();
+        for(int i = 0; i < maxAmountToSpawn; i++)
+        {
+            var spawn = freeSpawns[Random.Range(0, spawnPoints.Length)];
+            freeSpawns.Remove(spawn);
+            Instantiate(blockPrefab, spawn.position, Quaternion.identity);
+        }       
+    }
 }

@@ -9,21 +9,24 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: a7011429ce29e5c418833e810dd0b87e
   - enabled: 1
+    path: Assets/Creator Kit - RPG/Scenes/Level1.unity
+    guid: 835633ec855681c4d8f843b97d8e2bd8
+  - enabled: 0
     path: Assets/Creator Kit - RPG/Scenes/LevelE1.unity
     guid: 5af6c6155179233429dcd21c3cfc9bd2
-  - enabled: 1
-    path: Assets/Creator Kit - RPG/Scenes/Level2.unity
-    guid: 110ec4c350c5dc847bcb32ee0eb0b9e6
-  - enabled: 1
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Creator Kit - RPG/Scenes/LevelE3.unity
     guid: 7ccc7ee01bbb31244b9e98d2480ecfe1
-  - enabled: 1
-    path: Assets/Creator Kit - RPG/Scenes/Level_4.unity
-    guid: 2ea7383a0a8af431080e0aa251ee7115
-  - enabled: 1
-    path: Assets/Creator Kit - RPG/Scenes/LevelE2Moving.unity
-    guid: 4c82f0d4a0ee1274a98aaac39c74a9d8
-  - enabled: 1
-    path: Assets/End.unity
-    guid: 368640425c4e3cf4d9e4d097c37498e3
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

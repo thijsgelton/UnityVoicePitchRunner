@@ -78162,6 +78162,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UserInterfacePixelated
       objectReference: {fileID: 0}
+    - target: {fileID: 2581073520178041226, guid: 38cf32ac2bf66774d92dd281c9078d96,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2581073520178118412, guid: 38cf32ac2bf66774d92dd281c9078d96,
         type: 3}
       propertyPath: m_AnchorMin.y
