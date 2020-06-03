@@ -12,6 +12,11 @@ namespace RPGM.Gameplay
         AudioSource audioSourceA, audioSourceB;
         float audioSourceAVolumeVelocity, audioSourceBVolumeVelocity;
 
+        private void Awake()
+        {
+            InvokeRepeating("IncreaseSpeed", 1f, 1f);
+        }
+
         public void CrossFade(AudioClip audioClip)
         {
             var t = audioSourceA;
@@ -19,6 +24,11 @@ namespace RPGM.Gameplay
             audioSourceB = t;
             audioSourceA.clip = audioClip;
             audioSourceA.Play();
+        }
+
+        void IncreaseSpeed()
+        {
+            audioSourceA.pitch = audioSourceA.pitch * 1.005f;
         }
 
         void Update()

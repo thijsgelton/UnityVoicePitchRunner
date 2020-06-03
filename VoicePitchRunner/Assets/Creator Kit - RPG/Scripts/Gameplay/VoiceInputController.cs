@@ -48,12 +48,9 @@ namespace RPGM.UI
         void CharacterControl()
         {
             var pitchValue = pitchController.GetPitch();
-            if(pitchValue > 350)
+            if(pitchValue > 150 + manager.IdleThreshold)
             {
                 model.player.nextMoveCommand = Vector3.left * stepSize;
-            } else if (pitchValue < manager.IdleThreshold)
-            {
-                model.player.nextMoveCommand = Vector3.zero;
             } else
             {
                 model.player.nextMoveCommand = Vector3.right * stepSize;

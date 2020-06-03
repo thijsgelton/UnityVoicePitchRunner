@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6170736}
   - component: {fileID: 945233600}
   - component: {fileID: 945233599}
-  - component: {fileID: 1189873170406679021}
   - component: {fileID: 9182779226922518872}
+  - component: {fileID: 7630317030652155284}
   m_Layer: 0
   m_Name: LongBlock
   m_TagString: Untagged
@@ -148,19 +148,6 @@ MonoBehaviour:
   rigidbody2D: {fileID: 0}
   direction: {x: 0, y: -0.0001}
   relativeToRotation: 0
---- !u!114 &1189873170406679021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb045083f10d3b84787932c2b5ef0cd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DownwardVelocity: 0.5
 --- !u!114 &9182779226922518872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,3 +162,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyWhenActivated: 1
   healthChange: -1
+--- !u!114 &7630317030652155284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb045083f10d3b84787932c2b5ef0cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DownwardVelocity: 0.5

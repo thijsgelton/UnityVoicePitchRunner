@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         MicroPhone = Microphone.devices[0];
+        IdleThreshold = 50.0;
     }
 
     public void BackToMenu(float delayInSeconds)

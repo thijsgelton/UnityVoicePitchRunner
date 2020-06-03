@@ -1,8 +1,7 @@
-using RPGM.Core;
-using RPGM.Gameplay;
 using UnityEngine;
 using UnityEngine.Audio;
 using System.Linq;
+using System.Collections.Generic;
 
 /// <summary>
 /// Sends user input to the correct control systems.
@@ -12,6 +11,10 @@ public class PitchController : MonoBehaviour
 {
     AudioSource _audio;
     public AudioMixerGroup microphone, master;
+
+    public float PitchValue, AveragedPitchValue;
+
+    public List<float> lastNSamples = new List<float>();
 
     private const int QSamples = 1024;
     private float[] _spectrum;
@@ -33,6 +36,7 @@ public class PitchController : MonoBehaviour
         }
         _audio.Play();
     }
+    
 
     public float GetPitch()
     {
@@ -46,6 +50,21 @@ public class PitchController : MonoBehaviour
             var dR = _spectrum[maxIndex + 1] / _spectrum[maxIndex];
             freqN += 0.5f * (Mathf.Pow(dR, 2) - Mathf.Pow(dL, 2));
         }
-        return freqN * (_fSample / 2) / QSamples;
+        PitchValue = freqN * (_fSample / 3) / QSamples;
+        AddPitchToList(PitchValue);
+        AveragedPitchValue = lastNSamples.Sum() / 3;
+        return AveragedPitchValue;
+    }
+
+    public void AddPitchToList(float pitch)
+    {
+        if(lastNSamples.Count < 3)
+        {
+            lastNSamples.Add(pitch);
+        } else
+        {
+            lastNSamples.RemoveAt(0);
+            lastNSamples.Add(pitch);
+        }
     }
 }
