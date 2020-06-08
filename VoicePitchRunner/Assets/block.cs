@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Block : MonoBehaviour
+public class block : MonoBehaviour
 {
     private Rigidbody2D rb;
 
