@@ -212,7 +212,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 66.45
+  m_fontSize: 108.2
   m_fontSizeBase: 120
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -258,7 +258,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -426,11 +426,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Use your voice to move the character left and right.
+  m_text: '- Use your voice to move the character left (it automatically walks to
+    the right).
 
 
-    Avoid the
-    objects coming towards you and get the highest score.'
+    Avoid the objects coming towards you and get the highest score.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4422fd8cf2666b84386346b5283ad2a7, type: 2}
   m_sharedMaterial: {fileID: 21040265067069690, guid: 4422fd8cf2666b84386346b5283ad2a7,
@@ -3399,6 +3399,9 @@ MonoBehaviour:
   microphone: {fileID: 2949142431377155994, guid: 3ef8f70622dbaa147af64a95113e098b,
     type: 2}
   master: {fileID: 24300002, guid: 3ef8f70622dbaa147af64a95113e098b, type: 2}
+  PitchValue: 0
+  AveragedPitchValue: 0
+  lastNSamples: []
 --- !u!82 &1870448365
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3912,7 +3915,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
